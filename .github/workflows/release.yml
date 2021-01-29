@@ -16,7 +16,9 @@ jobs:
     -
       name: extract tag
       id: vars
-      run: echo ::set-output name=version::"$(cd snapraid/ && git describe --abbrev=0)"
+      run: |
+        git fetch -a
+        echo ::set-output name=version::"$(cd snapraid/ && git describe --abbrev=0)"
     - 
       run: echo "Pushing version ${{ steps.version.outputs.version }}"
     - 
