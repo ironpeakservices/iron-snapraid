@@ -1,0 +1,3 @@
+[submodule "snapraid"]
+	path = snapraid
+	url = https://github.com/amadvance/snapraid
