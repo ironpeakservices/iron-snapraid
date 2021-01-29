@@ -10,5 +10,5 @@ Secure docker container for using snapraid.
     --device /dev/sdb:/dev/sdb \
     --device /dev/sdb1:/dev/sdb1 \
     --mount type=bind,source=/dev/disk,target=/dev/disk \
-    snapraid
+    ghcr.io/ironpeakservices/iron-snapraid:v11.5
 ```
