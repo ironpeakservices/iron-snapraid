@@ -16,7 +16,7 @@ jobs:
         fetch-depth: 0
     -
       name: extract tag
-      id: vars
+      id: version
       run: |
         git fetch --prune
         echo ::set-output name=version::"$(cd snapraid/ && git describe --abbrev=0)"

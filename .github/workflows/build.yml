@@ -16,10 +16,10 @@ jobs:
         fetch-depth: 0
     -
       name: extract tag
-      id: vars
+      id: version
       run: |
         git fetch --prune
         echo ::set-output name=snapraid_version::"$(cd snapraid/ && git describe --abbrev=0)"
     -
       name: docker build
-      run: docker build . --file Dockerfile --tag image:${{ steps.vars.outputs.snapraid_version }}
+      run: docker build . --file Dockerfile --tag image:${{ steps.version.outputs.snapraid_version }}
